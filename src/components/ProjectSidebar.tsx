@@ -16,7 +16,7 @@ export const ProjectSidebar = ({ projects }: { projects: Project[] }) => {
   return (
     <Sidebar className="glass-panel border-r border-matrix-primary/20">
       <SidebarHeader className="p-4 flex items-center justify-between">
-        <h2 className="text-matrix-primary font-code text-xl">GPT Engineer</h2>
+        <h2 className="text-matrix-title font-code text-xl">GPT Engineer</h2>
         <SidebarTrigger />
       </SidebarHeader>
       <SidebarContent>
@@ -34,7 +34,7 @@ export const ProjectSidebar = ({ projects }: { projects: Project[] }) => {
             >
               <div className="flex items-center gap-2">
                 <FolderGit2 size={18} className="text-matrix-primary" />
-                <span className="font-medium">{project.name}</span>
+                <span className="font-medium text-matrix-title">{project.name}</span>
               </div>
               <p className="text-sm text-muted-foreground mt-1">
                 {project.description}

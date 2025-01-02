@@ -25,6 +25,7 @@ export default {
           dark: "#0A0A0A",
           light: "#00FF41",
           accent: "#003B00",
+          title: "#ff4400", // Added new title color
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
