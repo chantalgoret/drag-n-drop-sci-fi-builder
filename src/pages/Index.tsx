@@ -1,13 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { ProjectSidebar } from "@/components/ProjectSidebar";
+import { DragDropArea } from "@/components/DragDropArea";
+import { MatrixRain } from "@/components/MatrixRain";
 
 const Index = () => {
+  const [projects, setProjects] = useState([
+    { id: 1, name: "Web Scraper", description: "A Python-based web scraper" },
+    { id: 2, name: "Chat Bot", description: "An AI-powered chatbot" },
+  ]);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full bg-matrix-dark overflow-hidden relative">
+        <MatrixRain />
+        <ProjectSidebar projects={projects} />
+        <main className="flex-1 p-6">
+          <DragDropArea projects={projects} setProjects={setProjects} />
+        </main>
       </div>
-    </div>
+    </SidebarProvider>
   );
 };
 
