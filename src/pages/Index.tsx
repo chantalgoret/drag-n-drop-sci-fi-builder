@@ -3,6 +3,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { ProjectSidebar } from "@/components/ProjectSidebar";
 import { DragDropArea } from "@/components/DragDropArea";
 import { MatrixRain } from "@/components/MatrixRain";
+import { PromptInput } from "@/components/PromptInput";
 
 const Index = () => {
   const [projects, setProjects] = useState([
@@ -15,7 +16,8 @@ const Index = () => {
       <div className="min-h-screen flex w-full bg-matrix-dark overflow-hidden relative">
         <MatrixRain />
         <ProjectSidebar projects={projects} />
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 space-y-6">
+          <PromptInput />
           <DragDropArea projects={projects} setProjects={setProjects} />
         </main>
       </div>
