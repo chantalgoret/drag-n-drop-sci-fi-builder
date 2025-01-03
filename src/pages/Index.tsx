@@ -9,6 +9,7 @@ const Index = () => {
   const [projects, setProjects] = useState([
     { id: 1, name: "Web Scraper", description: "A Python-based web scraper" },
     { id: 2, name: "Chat Bot", description: "An AI-powered chatbot" },
+    { id: 3, name: "Task Manager", description: "A React-based task management app" },
   ]);
 
   return (
@@ -16,7 +17,7 @@ const Index = () => {
       <div className="min-h-screen flex w-full bg-matrix-dark overflow-hidden relative">
         <MatrixRain />
         <ProjectSidebar projects={projects} />
-        <main className="flex-1 p-6 space-y-6">
+        <main className="flex-1 p-6 space-y-6 relative z-10">
           <PromptInput />
           <DragDropArea projects={projects} setProjects={setProjects} />
         </main>

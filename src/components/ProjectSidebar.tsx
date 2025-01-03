@@ -14,7 +14,7 @@ interface Project {
 
 export const ProjectSidebar = ({ projects }: { projects: Project[] }) => {
   return (
-    <Sidebar className="glass-panel border-r border-matrix-primary/20">
+    <Sidebar className="glass-panel border-r border-matrix-primary/20 relative z-20">
       <SidebarHeader className="p-4 flex items-center justify-between">
         <h2 className="text-matrix-title font-code text-xl">GPT Engineer</h2>
         <SidebarTrigger />
