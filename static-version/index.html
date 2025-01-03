@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sci-Fi Builder</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="min-h-screen bg-matrix-dark overflow-hidden relative">
+      <!-- Matrix Rain Effect -->
+      <canvas id="matrix-rain"></canvas>
+      
+      <!-- Main Content -->
+      <div class="container mx-auto p-6">
+        <!-- Prompt Input -->
+        <div class="glass-panel p-4 mb-6">
+          <input type="text" 
+                 class="w-full bg-black/50 text-matrix-primary border border-matrix-primary/30 rounded p-2" 
+                 placeholder="Enter your prompt here...">
+          <button class="mt-2 bg-matrix-primary text-black px-4 py-2 rounded hover:bg-matrix-secondary">
+            Generate
+          </button>
+        </div>
+
+        <!-- Drag Drop Area -->
+        <div class="glass-panel p-6 min-h-[400px]">
+          <h2 class="text-matrix-primary mb-4">Drag and Drop Area</h2>
+          <div class="border-2 border-dashed border-matrix-primary/30 rounded-lg p-4 min-h-[300px]">
+            <p class="text-matrix-primary/70">Drag items here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="matrix-rain.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
